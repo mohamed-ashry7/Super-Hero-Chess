@@ -27,13 +27,13 @@ public class PlayTheGame  {
 //	String name2 ;
 	GUI view ; 
 	Game game ; 
-	public void playSound(String soundFile) throws LineUnavailableException, MalformedURLException, UnsupportedAudioFileException, IOException {
-	    File f = new File("./" + soundFile);
-	    AudioInputStream audioIn = AudioSystem.getAudioInputStream(getClass().getResource(soundFile));  
-	    Clip clip = AudioSystem.getClip();
-	    clip.open(audioIn);
-	    clip.start();
-	}
+//	public void playSound(String soundFile) throws LineUnavailableException, MalformedURLException, UnsupportedAudioFileException, IOException {
+//	    File f = new File("./" + soundFile);
+//	    AudioInputStream audioIn = AudioSystem.getAudioInputStream(getClass().getResource(soundFile));  
+//	    Clip clip = AudioSystem.getClip();
+//	    clip.open(audioIn);
+//	    clip.start();
+//	}
 	
 	
 	public PlayTheGame () {
@@ -43,30 +43,10 @@ public class PlayTheGame  {
 
 
 	}
-//	public static void music(){
-//
-//	    String filename = "darkAura.wav";
-//	    ContinuousAudioDataStream loop = null;
-//	    InputStream in = null;
-//	    try {
-//	        in = new FileInputStream(filename);
-//	    } catch (FileNotFoundException ex) {
-//	        System.out.println("File not found");
-//	    }
-//	    try {
-//	    	AudioStream s = new AudioStream(in);     
-//	    	AudioData audiodata = s.getData();
-//	    	loop = new ContinuousAudioDataStream(audiodata);
-//	    	AudioPlayer.player.start(loop);
-//	    } catch (IOException ex) {
-//	        System.out.println(ex.getMessage());
-//	    }
-//
-//	}
+
 	public static void main(String[] args) throws LineUnavailableException, MalformedURLException, UnsupportedAudioFileException, IOException {
 
 		PlayTheGame play = new PlayTheGame() ; 
-		play.playSound("GameOfThrones.wav") ; 
 	}
 	
 	private class playHandle implements ActionListener {
